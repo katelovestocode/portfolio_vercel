@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import { lazy } from 'react';
 
-function App() {
+const Layout = lazy(() => import('./components/Layout/Layout.jsx'));
+const Home = lazy(() => import('./pages/Home/Home.jsx'));
+const Projects = lazy(() => import('./pages/Projects/Projects.jsx'));
+const AboutMe = lazy(() => import('./pages/AboutMe/AboutMe.jsx'));
+const ContactMe = lazy(() => import('./pages/ContactMe/ContactMe.jsx'));
+const Footer = lazy(() => import('./components/Footer/Footer.jsx'));
+
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+
+          <Route path="about" element={<AboutMe />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="contact" element={<ContactMe />} />
+          <Route path="*" element={<Home />} />
+        </Route>
+      </Routes>
+      <Footer />
+    </>
   );
-}
+};
 
 export default App;
