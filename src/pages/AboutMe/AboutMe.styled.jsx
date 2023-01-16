@@ -33,9 +33,7 @@ max-width: 500px;
 `
 export const TextBox = styled.div` `
 
-export const Image = styled.img` 
-}
-`
+
 export const TitleText = styled.h3`
  font-size: 26px;
  font-weight: bold;

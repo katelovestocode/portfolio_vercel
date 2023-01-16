@@ -1,6 +1,6 @@
 import profilePicture from "../../icons/profiles/profilePictureEdit.jpg"
 import { Button, NavItem, } from "../../utils/commonStyles"
-import { Box, LeftBox, RightBox, TextBox, TitleText,  Image, Text} from "./AboutMe.styled"
+import { Box, LeftBox, RightBox, TextBox, TitleText, Text} from "./AboutMe.styled"
 import { IoCaretForward } from "react-icons/io5"
 import TechSkills from "../../components/TechSkills/TechSkills"
 
@@ -13,7 +13,7 @@ const AboutMe = () => {
     <Box > 
    
       <LeftBox >
-      <Image src={profilePicture}  alt='Kate Vaskevich' />
+      <img src={profilePicture}  alt='Kate Vaskevich' />
       </LeftBox>
                 
       <RightBox >
