@@ -7,16 +7,25 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 gap: 30px;
-margin: 80px 0;
+margin: 20px 0;
 
   @media (max-width: 840px) {
     flex-direction: column-reverse;
     text-align: center;
+  
   }
+`
+export const Container = styled.div`
+margin-bottom: 20px;
+
+ @media (min-width: 840px) { 
+  margin-bottom: 0;
+ }
 
 `
+
 export const Title = styled.h1`
-    font-weight: 700;
+    font-weight: bold;
     font-size: 45px;
 
  @media (min-width: 840px) { 
@@ -29,7 +38,7 @@ export const Title = styled.h1`
 `
 
 export const SubTitle = styled.h2`
-    font-weight: 700;
+    font-weight: bold;
     font-size: 35px;
     margin-bottom: 15px;
     color: ${greyTextColor};
@@ -45,7 +54,7 @@ export const SubTitle = styled.h2`
 
 export const Text = styled.p`
     font-weight: 500;
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 60px;
     color: ${greyTextColor};
   

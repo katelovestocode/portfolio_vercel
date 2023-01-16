@@ -1,6 +1,6 @@
 import React from 'react'
 import girl from "../../icons/profiles/hero_colorEdited.jpg"
-import {FlexContainer, Title, SubTitle, Text} from "./Home.styled"
+import {FlexContainer, Title, SubTitle, Text, Container} from "./Home.styled"
 import { IoCaretForward } from "react-icons/io5"
 import {Button, NavItem} from "../../utils/commonStyles"
 
@@ -19,7 +19,7 @@ const Home = () => {
         </div>
           
                
-        <div> <img src={girl} alt="busy girl" /></div>
+        <Container> <img src={girl} alt="busy girl" /></Container>
       </FlexContainer>
                 
   </main>
