@@ -29,7 +29,6 @@ export const Navigation = styled.nav`
     position: absolute;
     top: 100%;
     left: 0;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
