@@ -18,7 +18,8 @@ img {
   height: auto;
 }
 
-ul {
+ul,
+li {
   list-style: none;
 }
 

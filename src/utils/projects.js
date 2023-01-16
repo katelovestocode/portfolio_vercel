@@ -47,7 +47,7 @@ export const personalProjects = [
     link: 'https://katelovestocode.github.io/goit-markup-hw-08/',
     repo: 'https://github.com/katelovestocode/goit-markup-hw-08',
     preview: webStudioImg,
-    info: 'Responsive web page layout Web Studio - effective solutions for your business.',
+    info: 'Completed front-end design. Includes navigation, info blocks, social interaction elements, and various visual treatments with Responsive and Adaptive Layouts.',
     tech: [
       { id: 'id-1', name: 'HTML5' },
       { id: 'id-2', name: 'SCSS' },
@@ -62,7 +62,7 @@ export const teamProjects = [
     link: 'https://dzaporozhan.github.io/Filmoteka/',
     repo: 'https://github.com/DZaporozhan/Filmoteka',
     preview: filmotekaImg,
-    info: 'Filmoteka - is an application to search for a movie.',
+    info: 'Filmoteka - is an application to search for a movie. The public Themoviedb API was used for HTTP requests',
     tech: [
       { id: 'id-1', name: 'HTML5' },
       { id: 'id-2', name: 'SCSS' },
@@ -77,7 +77,7 @@ export const teamProjects = [
     link: 'https://victoriamyzyniuk.github.io/goit-team7-project/',
     repo: 'https://github.com/VictoriaMyzyniuk/goit-team7-project',
     preview: iceCreamImg,
-    info: 'Responsive/Adaptive web page layout for an IceCream Shop.',
+    info: 'Responsive and Adaptive web page layout for an IceCream Shop.',
     tech: [
       { id: 'id-1', name: 'HTML5' },
       { id: 'id-2', name: 'SCSS' },

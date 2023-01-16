@@ -7,6 +7,7 @@ export const themeStyles = {
       bckgColor: '#f2f5f8',
       borderColor: '#e7eaed',
       footerColor: 'rgb(236, 239, 241)',
+      lightGreyColor: '#EDF2F7',
     },
   },
 

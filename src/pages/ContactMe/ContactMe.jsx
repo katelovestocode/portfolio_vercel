@@ -1,84 +1,58 @@
 import React from 'react';
 import {ContainerStyle} from "./ContactMe.styled"
-import { Formik, Form, Field} from 'formik';
-import {ErrorMessageHandler, Main } from "./ContactMe.styled"
-import * as yup from 'yup';
+import { Main } from "./ContactMe.styled"
 import { Input, Button, Box, Flex, Textarea, Select, Text, VStack } from '@chakra-ui/react'
-import {HiOutlineMail} from "react-icons/hi"
+import { HiOutlineMail } from "react-icons/hi"
 
-// Input.defaultProps = { ...Input.defaultProps, focusBorderColor: "BlackAlpha.500 "};
-// Select.defaultProps = { ...Select.defaultProps, focusBorderColor: '#ff6b08' };
-// Textarea.defaultProps = { ...Select.defaultProps, focusBorderColor: '#ff6b08' };
 
 const requestType = ["job offer", "collaboration", "feedback", "other"]
 
-let schema = yup.object().shape({
-  name: yup.string().min(3, 'Too Short').max(50, 'Too Long!').required('Required'),
-  email: yup.string().email('Invalid email').required('Required'),
-  selection: yup.string().required("Please select type of request").oneOf(requestType),
-  message: yup.string().min(30, 'Short Message').required('Required'),
- 
-});
-
-const initialValues = {
-    name: "",
-    email: "",
-    selection: "",
-    message: ""
-}
  
 const ContactMe = () => {
 
-    const handleSubmit = (values, {resetForm}) => {
-        resetForm();
-}
+
     return (<Main>
         <ContainerStyle> 
 
-        <Flex align="center" justify="center" > 
-    
-    
-        <Formik initialValues={initialValues} validationSchema={schema} onSubmit={handleSubmit}> 
-               
-        <Form autoComplete="off" > 
+        <Flex  align="center" justify="center" > 
+      
+        <form  autoComplete="off" action="https://getform.io/f/b420cd85-e6df-4952-be08-58ad59c2886b" method="POST" > 
 
         
-        <Box bg="white"  boxShadow='2xl' rounded="md" w={450} p={4}  align="center" >
+        <Box bg="white" bgColor='blackAlpha.50'   boxShadow='2xl' rounded="md"   w={[300, 450]} p={6} align="center"  >
 
-        <Box mb={4}>                  
+        <Box mb={4} >                  
         <Text fontSize='3xl' as='b' color='brand.accentColor'> Contact Me </Text>
         </Box> 
         <VStack spacing={4} align="flex-start">
-        <Field as={Input}  type="text" name="name" placeholder="Enter your name" /> 
-            <ErrorMessageHandler name="name" component="div"  />
-        <Field as={Input} type="text" name="email" placeholder="Enter your email" /> 
-            <ErrorMessageHandler name="email" component="div" />
+                            
+        <Input bg="white" type="text" name="name" placeholder="Enter your name" pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+                title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan" required /> 
+       
+        <Input  bg="white"  type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Invalid email address" placeholder="Enter your email" required /> 
+        
                 
-        <Field as={Select} type="select" name="selection"> <option value=""> Select type of request </option>
+        <Select bg="white" type="select" name="selection" required> <option value="" > Select type of request </option>
                     {requestType.map((type, index) => (<option value={type} key={index}> {type}</option>))}
-                </Field>
-        <ErrorMessageHandler name="selection" component="div" />
+                </Select>
+        
                 
-        <Field name="message" as={Textarea} placeholder="Enter your message"/> 
-            <ErrorMessageHandler name="message" component="div"/> 
+        < Textarea bg="white"  name="message" type="text" placeholder="Enter your message" required/> 
+           
       </VStack>
                              
-<Button leftIcon={<HiOutlineMail />} colorScheme='teal' variant='solid' type="submit" spacing={4}  m={6} p={6} align='center'> Submit </Button>
-                         
-
-                        
-    </Box>
+    <Button  leftIcon={<HiOutlineMail />} bgColor="brand.accentColor" color='brand.primaryColor' _hover={{
+    background: "brand.borderColor",
+    color: "brand.accentColor",
+  }} variant='solid' type="submit" spacing={4}  m={6} p={6} align='center'> Submit </Button>
+                                 
+      </Box>
   
-        
-    </Form>
+    </form>
+
+    </Flex>
             
-    </Formik>
-
-
-
-            </Flex>
-            
-            </ContainerStyle>
+    </ContainerStyle>
     </Main>)
 }
 
