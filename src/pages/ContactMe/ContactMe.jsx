@@ -19,7 +19,7 @@ const ContactMe = () => {
         <form  autoComplete="off" action="https://getform.io/f/b420cd85-e6df-4952-be08-58ad59c2886b" method="POST" > 
 
         
-        <Box bg="white" bgColor='blackAlpha.50'   boxShadow='2xl' rounded="md"   w={[300, 450]} p={6} align="center"  >
+        <Box bg="white" bgColor='blackAlpha.50'   boxShadow='2xl' rounded="md"   w="100%" p={6} align="center"  >
 
         <Box mb={4} >                  
         <Text fontSize='3xl' as='b' color='brand.accentColor'> Contact Me </Text>
