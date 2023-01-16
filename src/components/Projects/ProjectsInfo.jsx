@@ -1,9 +1,10 @@
 import { Title, Wrapper, Subtitle, Item, Image, Box, Link, Tech, TechItem} from "./ProjectsInfo.styled"
 import { AiFillGithub } from 'react-icons/ai';
-import { BsFolderSymlink} from 'react-icons/bs';
+import { BsFolderSymlink } from 'react-icons/bs';
+import propTypes from 'prop-types';
 
 
-const ProjectsInfo = ({ id, label, link, repo, preview, info, tech }) => {
+const ProjectsInfo = ({ label, link, repo, preview, info, tech }) => {
     return (
         <>
         <Item> 
@@ -28,6 +29,20 @@ const ProjectsInfo = ({ id, label, link, repo, preview, info, tech }) => {
         
         </> )
 }
+
+ProjectsInfo.propTypes = {
+  info: propTypes.string,
+  label: propTypes.string,
+  link: propTypes.string,
+  preview: propTypes.string,
+  repo: propTypes.string,
+  tech: propTypes.arrayOf(
+    propTypes.shape({
+      id: propTypes.string.isRequired,
+      name: propTypes.string,
+    }),
+  ),
+};
 
 export default ProjectsInfo;
 
