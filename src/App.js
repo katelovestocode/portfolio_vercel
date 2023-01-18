@@ -3,6 +3,7 @@ import { lazy } from 'react';
 import Container from './components/Container/Container.jsx';
 import { Suspense } from 'react';
 import { Loader } from './components/Loader/Loader.jsx';
+// import { Outlet } from 'react-router-dom';
 
 const Layout = lazy(() => import('./components/Layout/Layout.jsx'));
 const Home = lazy(() => import('./pages/Home/Home.jsx'));
@@ -18,7 +19,7 @@ export const App = () => {
       <Container>
         <Suspense fallback={<Loader />}>
           <Routes>
-            <Route index element={<Home />} />
+            <Route path="/" element={<Home />} exact />
 
             <Route path="about" element={<AboutMe />} />
             <Route path="projects" element={<Projects />} />
