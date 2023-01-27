@@ -24,7 +24,7 @@ const ContactMe = () => {
         <Box mb={4} >                  
         <Text fontSize='3xl' as='b' color='brand.accentColor'> Contact Me </Text>
         </Box> 
-        <VStack spacing={4} align="flex-start"  w={[300, 450]}>
+        <VStack spacing={4} align="flex-start"  w={[280, 450]}>
                             
         <Input bg="white" type="text" name="name" placeholder="Enter your name" pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
                 title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan" required /> 

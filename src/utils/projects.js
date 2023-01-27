@@ -22,6 +22,7 @@ export const personalProjects = [
       { id: 'id-7', name: 'Axios' },
       { id: 'id-8', name: 'Styled-Components' },
       { id: 'id-9', name: 'Emotion' },
+      { id: 'id-10', name: 'Material-ui' },
     ],
   },
 

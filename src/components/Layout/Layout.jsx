@@ -2,6 +2,9 @@ import { Header, Navigation, NavItem, Link, Image, ModalBtn } from "./Layout.sty
 import icon from "../../icons/profiles/kosylyaEdit.gif"
 import {useState} from "react";
 import { MdMenu, MdClose } from 'react-icons/md';
+import {Loader}  from '../Loader/Loader';
+import { Suspense } from 'react';
+import { Outlet } from 'react-router-dom';
 
 
 
@@ -28,10 +31,12 @@ const Layout = () => {
                     <NavItem to={"about"} key={"about"}> About Me </NavItem>
                     <NavItem to={"projects"} key={"projects"}> Projects </NavItem>
                     <NavItem to={"contact"} key={"contact"}> Contact </NavItem>
-             </Navigation>
-          
-            
+             </Navigation>    
       </Header>
+
+      <Suspense fallback={<Loader />}>
+        <Outlet />
+      </Suspense>
            
      </>
         )

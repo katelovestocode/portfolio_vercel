@@ -18,7 +18,7 @@ export const Header = styled.header`
 `
 
 export const ModalBtn = styled.div`
-  @media (min-width: 780px) {
+  @media (min-width: 781px) {
     display: none;
   }
 `;
@@ -49,19 +49,19 @@ display: flex;
 gap: 60px; }
 `
 
-export const FlexContainer = styled.div`
+// export const FlexContainer = styled.div`
 
-@media (min-width: 780px) {
-max-width: 1170px;
-padding-left: 15px;
-padding-right: 15px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-margin-left: auto;
-margin-right: auto;
-}
-`
+// @media (min-width: 780px) {
+// max-width: 1170px;
+// padding-left: 15px;
+// padding-right: 15px;
+// display: flex;
+// justify-content: space-between;
+// align-items: center;
+// margin-left: auto;
+// margin-right: auto;
+// }
+// `
 
 export const NavItem = styled(NavLink)`
   display: flex;
