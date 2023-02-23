@@ -70,7 +70,7 @@ export const personalProjects = [
     link: 'https://katelovestocode.github.io/goit-markup-hw-08/',
     repo: 'https://github.com/katelovestocode/goit-markup-hw-08',
     preview: webStudioImg,
-    info: 'Completed front-end design. Includes navigation, info blocks, social interaction elements, and various visual treatments with Responsive and Adaptive Layouts.',
+    info: 'Completed front-end design. Includes navigation, info blocks, social interaction elements with Responsive/Adaptive Layouts.',
     tech: [
       { id: 'id-1', name: 'HTML5' },
       { id: 'id-2', name: 'SCSS' },
@@ -85,7 +85,7 @@ export const teamProjects = [
     link: 'https://dzaporozhan.github.io/Pets-frontend/',
     repo: 'https://github.com/DZaporozhan/Pets-frontend',
     preview: petlyImg,
-    info: 'Petly - is a web application that helps post an ad and look for a pet, with the ability to register an account and add information about yourself and your pets.',
+    info: 'Petly is a web app that helps post an ad and look for a pet, with the ability to register an account and add info about yourself and your pets.',
     tech: [
       { id: 'id-1', name: 'Styled-Components' },
       { id: 'id-2', name: 'React.js' },
